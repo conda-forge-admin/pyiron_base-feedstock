@@ -2,8 +2,7 @@ schema_version: 1
 
 context:
   name: pyiron_base
-  version: 0.15.18
-  python_min: '3.11'
+  version: "0.15.19"
 
 package:
   name: ${{ name|lower }}
@@ -11,9 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
-  sha256: f2ff954b871a253a37d32a6cf2d4feb7569128dc3d69d4d3388eb04e4b8441da
-  patches:
-    - pyiron_snippets.patch
+  sha256: 1acef53b33d11029e621ff11233ea751ef3c0299ea140006ca06d070edf6150b
 
 build:
   number: 0
@@ -51,17 +48,17 @@ requirements:
   run:
     - python >=${{ python_min }},<3.14
     - cloudpickle >=2.2.1,<=3.1.2
-    - executorlib >=0.1.0,<=1.10.2
-    - h5io_browser >=0.0.14,<=0.2.16
+    - executorlib >=0.1.0,<=1.10.3
+    - h5io_browser >=0.0.14,<=0.2.17
     - h5py >=3.11.0,<=3.16.0
-    - numpy >=1.26.0,<=2.4.6
+    - numpy >=1.26.0,<=2.5.3
     - monty >=2025.1.3,<=2026.2.18
     - pandas >=2.0.0,<=3.0.5
     - psutil >=5.9.3,<=7.2.2
     - pyfileindex >=0.2.0,<=0.2.2
-    - pyiron_dataclasses >=0.0.4,<=0.0.13
+    - pyiron_dataclasses >=0.0.4,<=0.0.14
     - pyiron_snippets >=1.0.1,<=1.5.0
-    - pysqa >=0.1.12,<=0.4.4
+    - pysqa >=0.1.12,<=1.0.0
     - sqlalchemy >=2.0.22,<=2.0.52
     - pytables ==3.11.1
     - tqdm >=4.44.0,<=4.70.0
